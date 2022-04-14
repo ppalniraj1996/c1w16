@@ -7,14 +7,16 @@ import GroceryItem from "./GroceryItem"
 
 const GroceryDetails = ()=>{
 // console.log(data)
-
+const handleDelete =(item) =>{
+    console.log(item)
+}
     return(
         <>
         <h1>Groceries</h1>
         <div className="container">
             {data.map((item,index)=>{
                 return(
-                  <GroceryItem key ={item.id} {...item}/>
+                  <GroceryItem key ={item.id} {...item} handleRemove ={handleDelete}/>
                 )
                
             })}
